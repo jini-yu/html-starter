@@ -1,0 +1,304 @@
+@charset "utf-8";
+@import url('fonts.css');
+
+body {font: 15px 'Nanum Myeongjo', serif; color: #585858;}
+
+/*hedaer*/
+header {}
+header .inner {height: 120px;}
+header .logo {
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+}
+header .gnb {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+header .gnb > a {
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    margin: 0 30px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #2c2222;
+}
+header .call {
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+    color: #2c2222;    
+}
+header .call strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+header .call strong:before {
+    content: '\f879';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    font-size: 20px;
+    color: #342929;
+    margin-right: 10px;
+}
+header .call span {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+/*mainVisual*/
+#mainVisual {position: relative;}
+#mainVisual .titleGroup {
+    position: absolute;
+    top: 50%; left: 200px;
+    transform: translateY(-50%);
+    color: #fff;
+    z-index: 5;  /*여러 요소들이 중첩되어 있을 때 요소간의 위아래 순서를 정하는 속성값으로 z-index가 적용되기 위해서는 반드시 position 속성이 먼저 선언되어있어야한다. 숫자가 높을수록 위에 위치한다. */
+}
+#mainVisual .titleGroup .title1 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#mainVisual .titleGroup .title2 {font-size: 18px; font-weight: 700; opacity: 0.7;}
+
+/*section#bestMenu*/
+#bestMenu.inner {width: 1400px;}
+#bestMenu .bestList {}
+#bestMenu .bestList li {float: left; width: 350px;}
+#bestMenu .bestList figure {text-align: center;}
+#bestMenu .bestList figure img {transition: all 0.3s;}
+#bestMenu .bestList figure:hover img {transform: scale(1.1);}
+#bestMenu .bestList .bestText strong {font-size: 16px; font-weight: 800; color: #342929;}
+#bestMenu .bestList .bestText strong + p {font-family: 'Noto Sans KR', sans-serif; margin: 10px 0 20px;}
+
+/*bizContent-사업아이템의 차별성*/
+#bizContents {
+    width: 1500px;
+    height: 460px; 
+    background: url(../img/Difference_bg.png) no-repeat center/cover;
+}
+#bizContents .bizArea {
+    position: absolute;
+    top: 120px; left: 120px;
+    width: 700px;
+}
+#bizContents .bizArea h2 {text-align: left;}
+#bizContents .bizArea li {
+    float: left; 
+    width: 25%; 
+    height: 150px; 
+    text-align: center;
+    background: no-repeat center top;
+}
+#bizContents .bizArea li:nth-child(1) {background-image: url(../img/Difference_icon01.png);}
+#bizContents .bizArea li:nth-child(2) {background-image: url(../img/Difference_icon02.png);}
+#bizContents .bizArea li:nth-child(3) {background-image: url(../img/Difference_icon03.png);}
+#bizContents .bizArea li:nth-child(4) {background-image: url(../img/Difference_icon04.png);}
+#bizContents .bizArea li strong {
+    display: block; 
+    margin-top: 120px; 
+    font-size: 16px; 
+    color: #2c2222; 
+    font-weight: 700;
+}
+#bizContents .btnMore {text-align: left;}
+
+/*#bizInfo - 창업정보*/
+#bizInfo.inner {width: 1400px;}
+#bizInfo > div {
+    position: relative;
+    float: left; 
+    width: 690px; 
+    height: 320px; 
+    margin-right: 20px; 
+    background: no-repeat center/cover;
+}
+#bizInfo > div + div {margin-right: 0;}
+#bizInfo .bizInfo01 {background-image: url(../img/Interior_img02.png)}
+#bizInfo .bizInfo02 {background-image: url(../img/center_img.png)}
+#bizInfo .bizInfo01 .bizInfo-box {
+    width: 280px;
+    height: 100%;
+    background: rgba(106, 68, 41, 0.87);
+    padding: 25px 0 0 30px;
+    box-sizing: border-box;
+}
+#bizInfo .bizInfo01 .bizInfo-text {margin-top: 80px;}
+#bizInfo .bizInfo01 .bizInfo-text p:nth-child(1) {font-size: 16px; font-weight: 800; color: rgba(255,255,255,0.6);}
+#bizInfo .bizInfo01 .bizInfo-text h3 {margin-top: 15px; font-size: 24px; font-weight: 800; color: #fff;}
+#bizInfo .bizInfo02:before {
+    content: '';
+    display: block; 
+    width: 650px;
+    height: 280px;
+    border: 1px solid  rgba(255,255,255,0.6);
+    position: absolute;
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+}
+#bizInfo .bizInfo02 .bizText {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#bizInfo .bizInfo02 .bizText p:nth-child(1) {font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 10px;}
+#bizInfo .bizInfo02 .bizText p:nth-child(2) {line-height: 1.7; color: rgba(255,255,255,0.6)}
+
+
+/*findStore-매장찾기*/
+#findStore.inner {width: 820px;}
+#findStore .findForm .storeList {position: relative; float: left; width: 150px;}
+#findStore .findForm .storeAll {
+    position: relative;
+    display: block;
+    height: 46px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 46px;
+    font-size: 16px;
+    color: #222;
+    font-weight: 800;
+}
+#findStore .findForm .storeList > ul {
+    position: absolute;
+    top: 46px; left: 0;
+    width: 150px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    margin-top: -2px;
+    border-top-width: 0;
+    z-index: 5;
+    display: none;
+}
+#findStore .findForm .storeAll:hover + ul {display: block;}
+#findStore .findForm .storeList > ul li {
+    line-height: 36px; 
+    border-bottom: 1px solid #ccc;
+}
+#findStore .findForm .storeList > ul li:last-child {border-bottom: 0;}
+#findStore .findForm input[type="search"] {
+    margin-left: 30px; 
+    width: 440px;
+    height: 46px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+#findStore .findForm input[type="search"]:focus {outline: none;}/*커서가 input요소안에 들어갔을때는 :focus 상태라고 하며 포커스 상태일 때 요소의 테두리가 생기는 것을 없앰.*/
+#findStore .findForm .btnMore {float: right; margin-top: 0; text-align: left;}
+#findStore .storeGroup {margin-top: 60px;}
+#findStore .storeGroup > a {
+    position: relative;
+    display: block;
+    float: left;
+    width: 260px;
+    height: 100px;
+    margin-right: 20px;
+    background: #d0d0d0;
+    padding: 30px 0 0 20px;
+    box-sizing: border-box;
+}
+#findStore .storeGroup > a:last-child {margin-right: 0;}
+#findStore .storeGroup > a strong {font-size: 18px; font-weight: 800; color: #222;}
+#findStore .storeGroup > a p {font-family: 'Noto Sans KR',sans-serif; margin-top: 10px;}
+#findStore .storeGroup > a span {
+    position: absolute;
+    top: 10px; right: 10px;
+    padding: 5px;
+    border-radius: 2px;
+    background: #6c4a31;
+    color: #fff;
+    font-size: 12px;
+}
+/*#banner-하단배너*/
+#banner {
+    display: table;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../img/location_text_bg.png) no-repeat center/cover;
+    height: 320px;
+}
+#banner > p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+/*#startApply - 창업문의*/
+#startApply.inner {width: 1200px;}
+#startApply form {margin-top: 60px;}
+#startApply form label {
+    display: block; 
+    font-size: 17px; 
+    font-weight: 800; 
+    color: #111; 
+    margin-bottom: 5px;
+}
+#startApply form ul {float: left; width: 550px; margin-right: 50px;}
+#startApply form ul li {margin-bottom: 20px;}
+#startApply .right {margin-right: 0;}
+#srartApply input {border: 1px solid #ccc; height: 46px;}
+#srartApply input:focus {outline: 0;}
+#srartApply input[type="text"] {width: 420px;}
+#startApply input[type="tel"] {width: 120px; margin: 0 3px;}
+#startApply textarea {width: 100%; height: 240px; resize: none; border: 1px solid #ccc;}
+#startApply .chk-label {display: inline-block; margin-left: 10px;}
+#startApply input[type="checkbox"] {
+    width: 20px; height: 20px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+/*footer*/
+footer {padding: 30px 0; background: url(../img/footer_bg.png); font-size: 14px; font-family: 'Noto Sans KR', sans-serif;}
+footer .inner {width: 1200px; text-align: center; color: rgba(255,255,255,0.6)}
+footer .f-logo {margin-bottom: 40px;}
+footer .f-nav > a {padding: 6px 12px; margin: 0 5px; background: rgba(132, 124,124,0.5);font-size: 14px;}
+footer .f-nav > .bg {background: #2e2424;}
+footer address {margin-top: 30px;}
+footer p {margin-top: 10px;}
+
+
+/*공통요소*/
+.inner {position: relative; width: 1760px; margin: 0 auto;}
+section + section {padding: 80px 0 40px;}
+section h2 {margin-bottom: 40px; font-size: 24px; font-weight: 800; color: #342929; text-align: center;}
+.btnMore {margin-top: 65px; text-align: center;}
+.btnMore > a {
+    display: inline-block; 
+    padding: 0 35px; 
+    height: 46px;
+    line-height: 46px;
+    border: 1px solid #222; 
+    font-weight: 800;
+    font-size: 18px;
+    color: #2c2222;
+    box-sizing: border-box;
+}
+.btnMore > .spoon {
+    padding-right: 80px;
+    background: url(../img/btn_bg.png) no-repeat right 20px center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
